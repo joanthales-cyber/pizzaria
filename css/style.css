@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fff9f0;
+    color: #2c1810;
+    line-height: 1.6;
+}
+
+/* ===== PALETA DE CORES PIZZARIA ===== */
+:root {
+    --primary-red: #c0392b;
+    --primary-dark: #a82313;
+    --secondary-orange: #e67e22;
+    --warm-yellow: #f39c12;
+    --cream: #fff9f0;
+    --brown-dark: #2c1810;
+    --gray-light: #f4f4f4;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* HEADER */
+.header {
+    background: linear-gradient(135deg, var(--primary-red), var(--primary-dark));
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 12px var(--shadow);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
+}
+
+.pizzaria-name {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* MENU CATEGORIAS */
+.categories-menu {
+    background-color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 8px var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.categories-menu ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.category-btn {
+    background: var(--cream);
+    border: 2px solid var(--secondary-orange);
+    padding: 10px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--brown-dark);
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.category-btn:hover {
+    background: var(--secondary-orange);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.category-btn.active {
+    background: var(--primary-red);
+    border-color: var(--primary-red);
+    color: white;
+}
+
+/* CORPO DO CARDÁPIO */
+.cardapio-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.category-section {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.category-section.active-section {
+    display: block;
+}
+
+.category-section h2 {
+    font-size: 2rem;
+    color: var(--primary-red);
+    margin-bottom: 30px;
+    border-left: 6px solid var(--secondary-orange);
+    padding-left: 20px;
+}
+
+/* GRADE DE PRODUTOS */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+.product-card h3 {
+    font-size: 1.4rem;
+    margin: 15px 15px 10px;
+    color: var(--brown-dark);
+}
+
+.product-card p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0 15px 15px;
+    line-height: 1.4;
+}
+
+.price {
+    display: inline-block;
+    background: var(--secondary-orange);
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 8px 18px;
+    border-radius: 30px;
+    margin: 0 15px 20px;
+    transition: background 0.3s;
+}
+
+.product-card:hover .price {
+    background: var(--primary-red);
+}
+
+/* RODAPÉ */
+.footer {
+    background-color: #1a110a;
+    color: #ddd;
+    padding: 40px 0 20px;
+    margin-top: 60px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 0 20px;
+}
+
+.company-info h4,
+.developer-info h4 {
+    color: var(--secondary-orange);
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.company-info p,
+.developer-info p {
+    margin: 8px 0;
+    font-size: 0.9rem;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 30px;
+    margin-top: 30px;
+    border-top: 1px solid #333;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* ANIMAÇÃO */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .pizzaria-name {
+        font-size: 1.6rem;
+    }
+    
+    .logo {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .category-btn {
+        padding: 6px 16px;
+        font-size: 0.85rem;
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    
+    .category-section h2 {
+        font-size: 1.6rem;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+}

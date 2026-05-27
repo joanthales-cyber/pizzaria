@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J.T Pizzaria - O sabor que você merece!</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- TOPO COM LOGO E NOME -->
+    <header class="header">
+        <div class="logo-container">
+            <img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png" alt="Logo J.T Pizzaria" class="logo">
+            <h1 class="pizzaria-name">J.T Pizzaria</h1>
+        </div>
+    </header>
+
+    <!-- MENU DE CATEGORIAS -->
+    <nav class="categories-menu">
+        <ul>
+            <li><button class="category-btn active" data-category="tradicional">🍕 Tradicional</button></li>
+            <li><button class="category-btn" data-category="especial">⭐ Especial</button></li>
+            <li><button class="category-btn" data-category="doce">🍫 Doces</button></li>
+            <li><button class="category-btn" data-category="vegetariana">🌿 Vegetariana</button></li>
+        </ul>
+    </nav>
+
+    <!-- CORPO DO CARDÁPIO - DIVIDIDO POR CATEGORIAS -->
+    <main class="cardapio-container">
+        <section id="tradicional" class="category-section active-section">
+            <h2>Pizzas Tradicionais</h2>
+            <div class="products-grid">
+                <!-- produto 1 -->
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500&auto=format" alt="Pizza Margherita">
+                    <h3>Margherita</h3>
+                    <p>Molho de tomate, mussarela de búfala, manjericão fresco e azeite.</p>
+                    <span class="price">R$ 45,90</span>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=500&auto=format" alt="Pizza Calabresa">
+                    <h3>Calabresa</h3>
+                    <p>Linguiça calabresa fatiada, cebola, mussarela e orégano.</p>
+                    <span class="price">R$ 48,90</span>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500&auto=format" alt="Pizza Portuguesa">
+                    <h3>Portuguesa</h3>
+                    <p>Presunto, ovos, cebola, azeitonas, ervilha e mussarela.</p>
+                    <span class="price">R$ 52,90</span>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1571066811602-716837aa62c8?w=500&auto=format" alt="Pizza Mussarela">
+                    <h3>Mussarela</h3>
+                    <p>Mussarela derretida, molho especial e tomate em rodelas.</p>
+                    <span class="price">R$ 43,90</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="especial" class="category-section">
+            <h2>Pizzas Especiais</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1595854341625-f33ee10dbf94?w=500&auto=format" alt="Pizza 4 Queijos">
+                    <h3>4 Queijos</h3>
+                    <p>Mussarela, provolone, parmesão e gorgonzola com um toque de manjericão.</p>
+                    <span class="price">R$ 59,90</span>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=500&auto=format" alt="Pizza Pepperoni">
+                    <h3>Pepperoni</h3>
+                    <p>Fatias de pepperoni importado, mussarela e molho especial da casa.</p>
+                    <span class="price">R$ 64,90</span>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=500&auto=format" alt="Pizza Frango com Catupiry">
+                    <h3>Frango com Catupiry</h3>
+                    <p>Frango desfiado, catupiry original, milho e azeitonas.</p>
+                    <span class="price">R$ 57,90</span>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1605478871122-75a5c2bc5cc3?w=500&auto=format" alt="Pizza Bacon">
+                    <h3>Bacon Explosion</h3>
+                    <p>Mussarela, bacon crocante, cheddar e cebola caramelizada.</p>
+                    <span class="price">R$ 67,90</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="doce" class="category-section">
+            <h2>Pizzas Doces</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1571066811602-716837aa62c8?w=500&auto=format" alt="Pizza Chocolate">
+                    <h3>Chocolate com Morango</h3>
+                    <p>Chocolate ao leite derretido, morangos frescos e granulado.</p>
+                    <span class="price">R$ 54,90</span>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.pexels.com/photos/708587/pexels-photo-708587.jpeg?w=500&auto=format" alt="Pizza Romeu e Julieta">
+                    <h3>Romeu & Julieta</h3>
+                    <p>Goiabada cascão e muito queijo mussarela derretido.</p>
+                    <span class="price">R$ 52,90</span>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1607478900766-5e3a21ed81bb?w=500&auto=format" alt="Pizza Banana com Canela">
+                    <h3>Banana com Canela</h3>
+                    <p>Bananas flambadas, açúcar com canela e leite condensado.</p>
+                    <span class="price">R$ 49,90</span>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.pexels.com/photos/4109813/pexels-photo-4109813.jpeg?w=500&auto=format" alt="Pizza Prestígio">
+                    <h3>Prestígio</h3>
+                    <p>Chocolate, coco ralado e leite condensado.</p>
+                    <span class="price">R$ 56,90</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="vegetariana" class="category-section">
+            <h2>Pizzas Vegetarianas</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=500&auto=format" alt="Pizza Vegetariana Clássica">
+                    <h3>Vegetariana Clássica</h3>
+                    <p>Pimentão, cebola, tomate, azeitonas, palmito e mussarela.</p>
+                    <span class="price">R$ 51,90</span>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=500&auto=format" alt="Pizza Rúcula com Tomate Seco">
+                    <h3>Rúcula com Tomate Seco</h3>
+                    <p>Rúcula fresca, tomates secos, mussarela de búfala e orégano.</p>
+                    <span class="price">R$ 58,90</span>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=500&auto=format" alt="Pizza Berinjela">
+                    <h3>Berinjela com Abobrinha</h3>
+                    <p>Berinjela grelhada, abobrinha, molho pesto e queijo branco.</p>
+                    <span class="price">R$ 54,90</span>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1573821663912-ebb0b1f74e9e?w=500&auto=format" alt="Pizza Cogumelos">
+                    <h3>Cogumelos ao Alho</h3>
+                    <p>Cogumelos Paris, alho poró, queijo minas e azeite trufado.</p>
+                    <span class="price">R$ 62,90</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPÉ COM DADOS DA EMPRESA E DESENVOLVEDOR -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="company-info">
+                <h4>J.T Pizzaria</h4>
+                <p>📞 (81) 99000-1111</p>
+                <p>📍 Rua da Pizza, 123 - Centro, Recife/PE</p>
+            </div>
+            <div class="developer-info">
+                <h4>Desenvolvido por</h4>
+                <p>👨‍💻 Joan Thales</p>
+                <p>📱 (81) 98888-7777</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 J.T Pizzaria - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
